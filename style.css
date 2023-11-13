@@ -1,0 +1,198 @@
+/****** ESTILO GERAL ******/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Encode Sans Semi Condensed', sans-serif, 'Fraunces', serif;
+}
+/****** ESTILO DO CABEÇALHO ******/
+
+.home-header {
+    background-color: #232323;
+    position: relative;
+    width: 100%;
+    z-index: 1; /* Garante a ordem de posicionamento no eixo Z */
+}
+
+/* Estilo do navegador superior  */
+
+.home-header-nav {
+    width: 100%;
+    padding: 20px 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    box-shadow: 0px 0px 10px #000000;
+}
+
+.logo {
+    display: inline-block;
+    width: 125px;
+    height: 125px;
+    margin-right: 50px;
+}
+
+.logo img {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+}
+
+.links {
+    list-style-type: none;
+}
+
+.links li {
+    display: inline-block;
+    padding: 0 10px 0 10px;
+}
+
+.links a {
+    font-weight: 400;
+    letter-spacing: 4px;
+    text-decoration: none;
+    display: inline-block;
+    transition: .2s;
+    -webkit-transition: .2s;
+    -moz-transition: .2s;
+    -ms-transition: .2s;
+    -o-transition: .2s;
+    color: #F0F0F0;
+}
+
+.links a:hover {
+    transform: scale(1.02);
+    -webkit-transform: scale(1.02);
+    -moz-transform: scale(1.02);
+    -ms-transform: scale(1.02);
+    -o-transform: scale(1.02);
+    color: #678362;
+}
+
+/* Estilo da desccrição do cabeçalho */
+
+.header-description {
+    width: 100%;
+    padding: 5% 3%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative; /* Add position relative */
+}
+
+.header-description::before {
+    content: "";
+    background-image: url('../assets/images/background-1.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    opacity: 0.3;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1; /* Send the pseudo-element to the background */
+}
+
+.header-profile-picture {
+    position: relative;
+    width: 45%;
+    max-width: 500px;
+    height: 300px;
+    margin-right: 5%;
+    border-radius: 0px 100px 100px 0px;
+    -webkit-border-radius: 0px 100px 100px 0px;
+    -moz-border-radius: 0px 100px 100px 0px;
+    -ms-border-radius: 0px 100px 100px 0px;
+    -o-border-radius: 0px 100px 100px 0px;
+    background: linear-gradient(to right, #2323235b 0%, #678362 90%);
+}
+
+.profile-picture {
+    position: absolute;
+    height: 350px;
+    bottom: 0;
+    right: 0;
+    border-radius: 0px 0px 100px 0px;
+    -webkit-border-radius: 0px 0px 100px 0px;
+    -moz-border-radius: 0px 0px 100px 0px;
+    -ms-border-radius: 0px 0px 100px 0px;
+    -o-border-radius: 0px 0px 100px 0px;
+}
+
+.header-description-text {
+    width: 50%;
+    max-width: 700px;
+}
+
+.welcome-text-header {
+    font-family: 'Fraunces';
+    color: white;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+.welcome-text-header::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 30%;
+    height: 5px;
+    border-radius: 5px 5px 5px 5px;
+    -webkit-border-radius: 5px 5px 5px 5px;
+    -moz-border-radius: 5px 5px 5px 5px;
+    -ms-border-radius: 5px 5px 5px 5px;
+    -o-border-radius: 5px 5px 5px 5px;
+    background-color: #678362;
+}
+
+.welcome-text-paragraph {
+    color: #c0c0c0;
+    text-align: justify;
+}
+
+
+.contact-btn button {
+    margin: 40px 0px;
+    padding: 15px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    color: #FFFFFF;
+    background-color: #678362;
+    border: 0;
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.contact-btn button:hover {
+    background-color: #A0A0A0;
+    box-shadow: 0px 0px 8px #8eb687;
+}
+
+.contact-btn button:active {
+    background-color: #707070;
+}
+
+/****** ESTILO DO CORPO ******/
+
+@media only screen and (max-width: 768px) {
+
+    .header-description {
+        padding: 40px 5%;
+    }
+
+    .header-profile-picture {
+        display: none; /* Hide the background for tablets and smartphones */
+    }
+
+    .header-description-text {
+        width: 100%;
+    }
+}
